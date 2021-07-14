@@ -1,0 +1,29 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+// Route::get('/', function () {
+//     return view('admin.layouts.app');
+// });
+
+Route::group(['prefix' => 'admin', 'as' => 'admin.','middleware' => ['auth']], function ()
+{
+	Route::get('/dashboard','DashboardController@index')->name('dashboard');
+	Route::resource('user','UserController');
+	Route::resource('user-log','UserLogController');
+});
+
+// Authentication Routes...
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('', 'Auth\LoginController@redirectTo');
