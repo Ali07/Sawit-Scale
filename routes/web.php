@@ -19,6 +19,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.','middleware' => ['auth']], f
 {
 	Route::get('/dashboard','DashboardController@index')->name('dashboard');
 	Route::resource('user','UserController');
+	Route::resource('profil-perusahaan','ProfilPerusahaanController');
+	Route::resource('tbs-masuk','TbsMasukController');
+	Route::get('tbs-masuk/cetak/{id}','TbsMasukController@cetak')->name('tbsmasuk.cetak');
+	Route::get('tbs-keluar/cetak/{id}','TbsKeluarController@cetak')->name('tbskeluar.cetak');
+	Route::get('laporan','LaporanController@index')->name('laporan.index');
+	Route::post('laporan/cetak','LaporanController@cetak')->name('laporan.cetak');
+	Route::resource('tbs-keluar','TbsKeluarController');
+	Route::resource('nota-penimbangan-tbs','NotaPenimbanganTbsController');
+	Route::resource('perusahaan-mitra','PerusahaanMitraController');
+	Route::resource('sopir','SopirController');
 	Route::resource('user-log','UserLogController');
 });
 

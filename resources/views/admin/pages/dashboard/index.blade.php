@@ -10,11 +10,11 @@
       <div class="col-lg-3 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
           <div class="card-icon bg-success">
-            <i class="fas fa-briefcase"></i>
+            <i class="fas fa-truck"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Item 1</h4>
+              <h4>TBS Masuk</h4>
             </div>
             <div class="card-body">
               1
@@ -24,12 +24,12 @@
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
-          <div class="card-icon bg-warning">
-            <i class="fas fa-cogs"></i>
+          <div class="card-icon bg-info">
+            <i class="fas fa-truck"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Item 2</h4>
+              <h4>TBS Keluar</h4>
             </div>
             <div class="card-body">
               2
@@ -40,11 +40,11 @@
       <div class="col-lg-3 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
           <div class="card-icon bg-danger">
-            <i class="fas fa-check"></i>
+            <i class="fas fa-building"></i>
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Item 3</h4>
+              <h4>Pembeli</h4>
             </div>
             <div class="card-body">
               3
@@ -59,7 +59,7 @@
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Item 4</h4>
+              <h4>Petani</h4>
             </div>
             <div class="card-body">
               4

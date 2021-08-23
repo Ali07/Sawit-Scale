@@ -15,7 +15,7 @@
       <div class="d-flex flex-wrap align-items-stretch">
         <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
           <div class="p-4 m-3">
-            <img src="{{ asset('admin_assets/img/stisla.svg') }}" alt="logo" width="80" class="shadow-light mb-5 mt-2">
+            <img src="{{ asset('admin_assets/img/logo.png') }}" alt="logo" width="60%" class="shadow-light mb-5 mt-2">
             <form method="POST" action="{{ route('login') }}">
                         @csrf
               <div class="form-group">
@@ -54,8 +54,8 @@
           <div class="absolute-bottom-left index-2">
             <div class="text-light p-5 pb-2">
               <div class="mb-5 pb-3">
-                <h1 class="mb-2 display-4 font-weight-bold">Selamat Pagi</h1>
-                <h5 class="font-weight-normal text-muted-transparent">Kalimantan Timur, Indonesia</h5>
+                {{-- <h1 class="mb-2 display-4 font-weight-bold">Selamat Pagi</h1>
+                <h5 class="font-weight-normal text-muted-transparent">Kalimantan Timur, Indonesia</h5> --}}
               </div>
             </div>
           </div>

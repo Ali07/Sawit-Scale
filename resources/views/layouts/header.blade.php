@@ -13,7 +13,9 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{ asset('admin_assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('admin_assets/css/components.css') }}">
-  <link rel="stylesheet" href="{{ asset('admin_assets/css/bootstrap-timepicker.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/css/bootstrap-timepicker.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/css/daterangepicker.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/css/bootstrap-datetimepicker.min.css') }}">
   
   <style>
     input[type=radio] {
