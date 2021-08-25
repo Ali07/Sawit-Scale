@@ -22,6 +22,8 @@ class NotaPenimbanganTbs extends Model
         'pendapatan',
     ];
 
+    protected $appends = ['tgl','pembeli'];
+
     public function perusahaanMitra()
     {
         return $this->belongsTo('App\PerusahaanMitra','perusahaan_mitra_id');
@@ -35,6 +37,11 @@ class NotaPenimbanganTbs extends Model
     public function getTglAttribute()
     {
         return date("d-M-Y",strtotime($this->tanggal));
+    }
+
+    public function getPembeliAttribute()
+    {
+        return $this->perusahaanMitra->nama;
     }
 
     // Scope

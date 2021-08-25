@@ -1,70 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-
-.table{
-  width: 100%;
-  border: 1px solid #000;
-  border-collapse: collapse;
-}
-
-
-</style>
+  <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
+    .tg .tg-baqh{text-align:center;vertical-align:top}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+  </style>
 </head>
 <body>
 
-<h2>Laporan TBS Keluar</h2>
-<p>CV. Tunas Alam Perkasa</p>
-<table style="width: 100%">
-    <tr>
-      <td>
-        <h3>TBS Keluar</h3>
-        <table class="table">
-            <tr>
-                <th>Tanggal</th>
-                <th>Supir/Plat</th>
-                <th>Tara</th>
-                <th>Gross</th>
-                <th>Nettor Keluar</th>
-            </tr>
-            @foreach($items as $item)
-                <tr>
-                    <td>{{$item->tanggal}}</td>
-                    <td>{{$item->sopir->nama}}</td>
-                    <td>{{$item->tara}}</td>
-                    <td>{{$item->gross}}</td>
-                    <td>{{$item->netto}}</td>
-                </tr>
-            @endforeach
-        </table>
-      </td>
-      <td>
-        <h3>NP Tbs</h3>
-        <table class="table">
+  
+    <table class="tg" width="100%">
+      <thead>
+        <tr>
+          <th class="tg-9wq8" colspan="15">CV TUNAS ALAM PERKASA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tg-c3ow" colspan="6">LAPORAN TBS KELUAR</td>
+          <td class="tg-0lax"></td>
+          <td class="tg-baqh" colspan="8">LAPORAN NP TBS</td>
+        </tr>
+        <tr>
+          <td class="tg-c3ow">No</td>
+          <td class="tg-0pky">Tanggal Keluar</td>
+          <td class="tg-0pky">Supir/Plat</td>
+          <td class="tg-0pky">Tara</td>
+          <td class="tg-0pky">Gross</td>
+          <td class="tg-0lax">Netto Keluar</td>
+          <td class="tg-0lax"></td>
+          <td class="tg-baqh">No</td>
+          <td class="tg-0lax">Tanggal NP</td>
+          <td class="tg-0lax">Pembeli</td>
+          <td class="tg-0lax">Harga(Rp)</td>
+          <td class="tg-0lax">Tara</td>
+          <td class="tg-0lax">Gross</td>
+          <td class="tg-0lax">Netto NP/ton</td>
+          <td class="tg-0lax">Pendapatan</td>
+        </tr>
+        @foreach($items as $item)
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Points</th>
+            <td class="tg-c3ow">{{$loop->iteration}}</td>
+            <td class="tg-0pky">{{$item->tanggal}}</td>
+            <td class="tg-0pky">{{$item->sopir->nama}}</td>
+            <td class="tg-0pky">{{$item->tara}}</td>
+            <td class="tg-0pky">{{$item->gross}}</td>
+            <td class="tg-0lax">{{$item->netto}}</td>
+            <td class="tg-0lax"></td>
+            <td class="tg-baqh">{{$loop->iteration}}</td>
+            <td class="tg-0lax">{{$item->notaPenimbanganTbs->tgl}}</td>
+            <td class="tg-0lax">{{$item->notaPenimbanganTbs->pembeli}}</td>
+            <td class="tg-0lax">{{$item->notaPenimbanganTbs->harga}}</td>
+            <td class="tg-0lax">{{$item->notaPenimbanganTbs->tara}}</td>
+            <td class="tg-0lax">{{$item->notaPenimbanganTbs->gross}}</td>
+            <td class="tg-0lax">{{$item->notaPenimbanganTbs->netto}}</td>
+            <td class="tg-0lax">{{$item->notaPenimbanganTbs->pendapatan}}</td>
           </tr>
-          <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-          </tr>
-          <tr>
-            <td>Adam</td>
-            <td>Johnson</td>
-            <td>67</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-</table>
+        @endforeach
+      </tbody>
+    </table>
 </body>
 </html>
