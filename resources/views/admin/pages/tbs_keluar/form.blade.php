@@ -1,6 +1,6 @@
 <div class="form-group">
 	<label for="">Tanggal dan Jam</label>
-	{!! Form::input('datetime-local','tanggal_jam', isset($item)? $item->total_biaya : Carbon\Carbon::now()->format('Y-m-d H:i'), ['class' => 'form-control datetimepicker','required']) !!}
+	{!! Form::text('tanggal_jam', null, ['class' => 'form-control datetimepicker','required']) !!}
 </div>
 <div class="form-group">
 	<label for="">Sopir</label>
