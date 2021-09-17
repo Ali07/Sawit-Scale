@@ -33,7 +33,7 @@ class TbsKeluarController extends Controller
     {
         $data = $this->model->find($id);
         $pdf = PDF::loadView('pdf.surat-jalan', ['data' => $data]);
-        return $pdf->stream('nota.pdf');
+        return $pdf->stream('nota-'.$data->sopir->nama.'.pdf');
     }
 
     public function customRequest($request)

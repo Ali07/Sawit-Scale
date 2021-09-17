@@ -35,7 +35,7 @@ class TbsMasukController extends Controller
     {
         $data = $this->model->find($id);
         $pdf = PDF::loadView('pdf.nota-pembelian', ['data' => $data]);
-        return $pdf->stream('nota.pdf');
+        return $pdf->stream('Nota Pembelian-'.$data->sopir->nama.'-'.$data->tanggal.'.pdf');
     }
 
     public function customRequest($request)
